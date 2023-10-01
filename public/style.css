@@ -1,65 +1,134 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
 }
-body{
-    background-color: rgb(255, 128, 0);
+
+body {
+    background: rgb(118, 141, 255);
+    background: radial-gradient(circle, rgba(118, 141, 255, 1) 11%, rgba(255, 148, 170, 1) 100%);
     font-family: monospace;
+    display: flex;
+    justify-content: space-around;
 }
-.chat{
-    width: 80%;
-    height: 100vh;
+
+.chat {
+    width: 80vw;
+    height: 90vh;
     background-color: white;
     padding: 1em 1em;
     display: flex;
-    margin: auto;
+    margin-top: 20px;
+    position: relative;
 }
-.sidebar{
+
+.sidebar {
+    padding: 20px;
     width: 30%;
     background-color: lightgreen;
 }
-.main{
+
+.main {
+    padding: 20px;
     width: 70%;
     display: flex;
     flex-direction: column;
     margin-left: 2em;
 }
-.forms{
+
+.forms {
     display: flex;
     width: 100%;
 
-    
+
 }
-#msg_ui{
+
+#msg_ui {
     height: 90vh;
+    overflow: auto;
 }
-form{
+
+form {
     width: 100%;
     display: flex;
 }
-input{
+
+input {
     width: 90%;
     box-sizing: border-box;
-    padding: 8px 0;
+    padding: 8px 10px;
+    /* Adjust padding as needed */
+    border: 1px solid #ccc;
+    /* Add a subtle border */
+    border-radius: 3px;
+    /* Add rounded corners */
+    outline: none;
+    /* Remove the outline */
+    transition: border-color 0.2s;
+    /* Add a transition for smoother effects */
 }
-.msg_name{
+
+/* Add a hover effect to make it look interactive */
+input:hover {
+    border-color: #007bff;
+    /* Change border color on hover */
+}
+
+/* Add focus styles for accessibility */
+input:focus {
+    border-color: #007bff;
+    /* Change border color on focus */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.6);
+    /* Add a subtle box shadow on focus */
+}
+
+.msg_name {
     font-weight: bold;
-    font-size: large;
-    color: rgb(17, 184, 17);
+    font-size: 0.75rem;
+    /* You can adjust the font size as needed */
+    color: #007bff;
+    /* A professional blue color */
 }
-.msg_meta{
-    color: grey;
-    font-size: x-small;
-    font-weight: bolder;
+
+.msg_meta {
+    color: #999;
+    /* A subdued gray color */
+    font-size: 0.5rem;
+    /* You can adjust the font size as needed */
+    font-weight: normal;
+    /* Use 'normal' instead of 'bolder' for lighter weight */
 }
-button{
-    background-color: mediumseagreen;
-    color: white;
-    margin-left: 2px;
-    padding-top: 2px;
-    width: 50px;
+
+button {
+    background-color: #007bff;
+    /* Professional blue color */
+    color: #fff;
+    padding: 8px 16px;
+    /* Adjust padding as needed */
     border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    /* Remove the default focus outline */
+    transition: background-color 0.2s;
+    /* Add a transition for smoother effects */
 }
-#msg_{
-    font-size: 2em;
+
+/* Add hover and focus styles */
+button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+button:focus {
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.6);
+    /* Add a subtle box shadow on focus */
+}
+
+#msg_ {
+    font-size: 1.5em;
+}
+
+#msg_>.msg_name {
+    margin: 15px 0;
+    /* Adjust the margin as needed */
 }
